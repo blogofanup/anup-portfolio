@@ -2,73 +2,186 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', sans-serif;
+  font-family: 'Segoe UI', -apple-system, BlinkMacSystemFont, Roboto, sans-serif;
 }
 
 body {
-  background: #f9f9f9;
-  color: #333;
-  line-height: 1.6;
+  background: #f4f7f9;
+  color: #2c3e50;
+  line-height: 1.7;
 }
 
 .container {
-  max-width: 800px;
+  max-width: 840px;
   margin: auto;
-  padding: 20px;
+  padding: 0 24px;
 }
 
+/* Header & Navigation Menu */
 header {
-  background: #004466;
-  color: white;
+  background: linear-gradient(135deg, #00334e 0%, #005580 100%);
+  color: #ffffff;
   text-align: center;
-  padding: 60px 20px;
+  padding: 48px 20px 32px;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.12);
 }
 
 header h1 {
-  font-size: 2.5em;
+  font-size: 2.4em;
+  letter-spacing: -0.5px;
+  margin-bottom: 6px;
 }
 
 header p {
-  font-size: 1.2em;
-  margin-top: 10px;
+  font-size: 1.05em;
+  color: #d9ecf5;
+  margin-bottom: 24px;
 }
 
-section {
-  padding: 40px 0;
+.main-nav {
+  display: inline-flex;
+  justify-content: center;
+  gap: 12px;
+  background: rgba(255, 255, 255, 0.12);
+  padding: 6px;
+  border-radius: 30px;
 }
 
-h2 {
-  margin-bottom: 20px;
+.main-nav a {
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 0.95em;
+  padding: 8px 24px;
+  border-radius: 24px;
+  text-decoration: none;
+  transition: background 0.25s ease, color 0.25s ease;
+}
+
+.main-nav a:hover,
+.main-nav a:focus {
+  background: #ffffff;
   color: #004466;
 }
 
-ul {
-  list-style-type: square;
-  padding-left: 20px;
+/* Content Cards (Home, Blog & Articles) */
+section.container,
+article.container {
+  background: #ffffff;
+  margin: 28px auto;
+  padding: 32px 36px;
+  border-radius: 10px;
+  box-shadow: 0 2px 12px rgba(0, 44, 66, 0.06);
+  border-top: 4px solid #0077cc;
 }
 
+h2 {
+  font-size: 1.55em;
+  color: #004466;
+  margin-bottom: 16px;
+  padding-bottom: 8px;
+  border-bottom: 1px solid #e6eef2;
+}
+
+h3 {
+  font-size: 1.2em;
+  color: #005580;
+  margin: 22px 0 10px;
+}
+
+p {
+  margin-bottom: 14px;
+}
+
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+ul li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 12px;
+}
+
+ul li::before {
+  content: "\25AA";
+  color: #0077cc;
+  font-size: 1.1em;
+  position: absolute;
+  left: 0;
+  top: -1px;
+}
+
+/* Blog Listing Preview Card */
+.post-preview {
+  background: #f8fbfd;
+  border: 1px solid #e1ecf2;
+  border-left: 4px solid #0077cc;
+  padding: 20px 24px;
+  border-radius: 6px;
+  margin-top: 16px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.post-preview:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 119, 204, 0.1);
+}
+
+.post-preview h3 {
+  margin-top: 0;
+}
+
+/* Links & Buttons */
 a {
   color: #0077cc;
   text-decoration: none;
+  font-weight: 500;
+}
+
+a:hover {
+  text-decoration: underline;
 }
 
 a.btn {
   display: inline-block;
   background: #0077cc;
-  color: white;
-  padding: 10px 20px;
+  color: #ffffff;
+  padding: 10px 22px;
   margin-top: 10px;
+  border-radius: 6px;
   text-decoration: none;
-  border-radius: 5px;
+  transition: background 0.2s ease;
 }
 
 a.btn:hover {
   background: #005fa3;
+  text-decoration: none;
 }
 
+/* Footer */
 footer {
-  background: #004466;
-  color: white;
+  background: #00334e;
+  color: #d9ecf5;
   text-align: center;
-  padding: 20px;
+  padding: 24px 20px;
+  margin-top: 40px;
+  font-size: 0.92em;
+}
+
+/* Mobile Responsiveness */
+@media (max-width: 600px) {
+  header {
+    padding: 36px 16px 24px;
+  }
+
+  header h1 {
+    font-size: 1.9em;
+  }
+
+  section.container,
+  article.container {
+    margin: 18px 14px;
+    padding: 24px 20px;
+  }
 }
