@@ -232,6 +232,63 @@
 
 <h4>What is the correct PIN code to use for Bolpur local SEO?</h4>
 <p>Use <strong>731204</strong> consistently across your Google Business Profile, website footer, and local directory listings for businesses located in Bolpur and Shantiniketan.</p>
+<h3>Quick Quiz: Test Your Bolpur Local SEO Knowledge</h3>
+<div id="bolpur-seo-quiz" style="border: 1px solid #ddd; border-radius: 8px; padding: 20px; margin: 20px 0; background-color: #fafafa;">
+  <p style="margin-top: 0;"><strong>1. What does NAP stand for in Local SEO?</strong></p>
+  <label style="display: block; margin-bottom: 6px;"><input type="radio" name="q1" value="a"> Network, Area, and PIN Code</label>
+  <label style="display: block; margin-bottom: 6px;"><input type="radio" name="q1" value="b"> Name, Address, and Phone Number</label>
+  <label style="display: block; margin-bottom: 16px;"><input type="radio" name="q1" value="c"> Navigation, Analytics, and Profile</label>
+
+  <p><strong>2. Which PIN code should Bolpur &amp; Shantiniketan businesses use consistently?</strong></p>
+  <label style="display: block; margin-bottom: 6px;"><input type="radio" name="q2" value="a"> 700001</label>
+  <label style="display: block; margin-bottom: 6px;"><input type="radio" name="q2" value="b"> 731204</label>
+  <label style="display: block; margin-bottom: 16px;"><input type="radio" name="q2" value="c"> 713101</label>
+
+  <p><strong>3. Which tool is best for appearing in the Google Maps top 3 Map Pack?</strong></p>
+  <label style="display: block; margin-bottom: 6px;"><input type="radio" name="q3" value="a"> Google Business Profile (GBP)</label>
+  <label style="display: block; margin-bottom: 6px;"><input type="radio" name="q3" value="b"> A 20-page corporate website</label>
+  <label style="display: block; margin-bottom: 16px;"><input type="radio" name="q3" value="c"> Paid social media ads only</label>
+
+  <button type="button" onclick="checkBolpurQuiz()" style="padding: 10px 18px; background-color: #222; color: #fff; border: none; border-radius: 5px; cursor: pointer; font-size: 0.95rem;">
+    Submit Answers
+  </button>
+
+  <div id="quiz-result" style="margin-top: 16px; font-weight: bold;"></div>
+</div>
+
+<script>
+  function checkBolpurQuiz() {
+    const answers = { q1: 'b', q2: 'b', q3: 'a' };
+    let score = 0;
+    let answered = 0;
+
+    for (let key in answers) {
+      const selected = document.querySelector('input[name="' + key + '"]:checked');
+      if (selected) {
+        answered++;
+        if (selected.value === answers[key]) {
+          score++;
+        }
+      }
+    }
+
+    const resultBox = document.getElementById('quiz-result');
+    if (answered < 3) {
+      resultBox.style.color = '#b00020';
+      resultBox.textContent = 'Please answer all 3 questions before submitting.';
+      return;
+    }
+
+    resultBox.style.color = '#0b6623';
+    if (score === 3) {
+      resultBox.textContent = 'Score: 3/3 — Excellent! Your Bolpur Local SEO fundamentals are spot on.';
+    } else if (score === 2) {
+      resultBox.textContent = 'Score: 2/3 — Great job! Review the guide above for the one you missed.';
+    } else {
+      resultBox.textContent = 'Score: ' + score + '/3 — Good start! Re-read the 4 steps above and try again.';
+    }
+  }
+</script> 
     <h3>Need Help Setting Up Local SEO for Your Business?</h3>
     <p>
       If you operate a business in Bolpur or nearby areas and want help optimizing your Google Business Profile or local landing page, you can reach me directly at <strong>+91 89004 82833</strong> or email <strong>anup.ain66@gmail.com</strong> (Monday – Friday, 10:00 AM – 5:00 PM).
